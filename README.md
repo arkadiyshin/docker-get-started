@@ -56,9 +56,11 @@ docker build .
 ## STEP 4
 
 run custom container
+
 **docker run -p [local port]:[expoused port]  [image_name or image_id]**
 
 stop a running container
+
 **docker stop [container_name or container_id]**
 
 
