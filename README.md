@@ -20,3 +20,28 @@ docker ps
 ```
 docker ps -a
 ```
+
+## STEP 2
+Create Dockerfile in the root of the project.
+
+*Simple sample docker file*
+```
+FROM node
+ 
+# change working directory like cd command in terminal
+WORKDIR /app 
+ 
+# copy all files from project ddirectory to the container
+COPY . /app 
+ 
+# run the command for installing dependencies
+RUN npm install
+ 
+# [optional] information about shared port from container
+EXPOSE 80
+ 
+# run the command to runnig our programm
+# the difference from the RUN command is that 
+# CMD is executed only after the container has been built and started
+CMD ["npm", "start"]
+```
