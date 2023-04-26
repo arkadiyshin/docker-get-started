@@ -30,13 +30,15 @@ FROM node
  
 # change working directory like cd command in terminal
 WORKDIR /app 
- 
-# copy all files from project ddirectory to the container
-COPY . /app 
- 
+
+COPY package.json /app
+
 # run the command for installing dependencies
 RUN npm install
- 
+
+# copy all files from project directory to the container
+COPY . /app 
+  
 # [optional] information about shared port from container
 EXPOSE 80
  
