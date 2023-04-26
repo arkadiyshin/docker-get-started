@@ -1,7 +1,7 @@
 # DOCKER CUSTOM INSTRUCTIONS
 
 ## STEP 1
-Find required for the project docker image
+find required for the project docker image
 
 **run \[image_name\]**: searches for a local image by name, if not found, downloads from dockerhub and then runs
 ```
@@ -22,7 +22,7 @@ docker ps -a
 ```
 
 ## STEP 2
-Create Dockerfile in the root of the project.
+create Dockerfile in the root of the project.
 
 *Simple sample docker file*
 ```
@@ -46,9 +46,19 @@ EXPOSE 80
 CMD ["npm", "start"]
 ```
 ## STEP 3
-Create our own custom image
+create our own custom image
 
 **build [path to Dockerfile]**
 ```
 docker build .
 ```
+
+## STEP 4
+
+run custom container
+**docker run -p [local port]:[expoused port]  [image_name or image_id]**
+
+stop a running container
+**docker stop [container_name or container_id]**
+
+
