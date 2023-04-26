@@ -45,3 +45,10 @@ EXPOSE 80
 # CMD is executed only after the container has been built and started
 CMD ["npm", "start"]
 ```
+## STEP 3
+Create our own custom image
+
+**build [path to Dockerfile]**
+```
+docker build .
+```
