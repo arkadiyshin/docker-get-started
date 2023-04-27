@@ -58,29 +58,52 @@ docker build .
 ## STEP 4
 run custom container
 
-**docker run -p [local port]:[expoused port] -d -rm [image_name or image_id]**
+**docker run -p \[local port\]:\[expoused port\] -d -name -rm \[image_name or image_id\]**
 *-p parametr matches local port and expoused port*
 *-rm parametr deletes container after stopping*
 *-d parametr runs container in detached mode (attached mode by the default)*
 
 stop a running container
 
-**docker stop [container_name or container_id]**
+**docker stop \[container_name or container_id\]**
 
 run a stopping container
 
-**docker start -a [container_name or container_id]**
+**docker start -a \[container_name or container_id\]**
 *-a parametr runs container in attached mode (detached mode by the default)*
 
 attach running container
 
-**docker attach [container_name or container_id]**
+**docker attach \[container_name or container_id\]**
 
 ## STEP 5
 delete images and containers
 
-**docker rmi [image_name or image_id]**
-**docker rm [container_name or container_id]**
+**docker rmi \[image_name or image_id\]**
+**docker rm \[container_name or container_id]**
 
 delete all images 
+
 **docker image prune**
+
+## STEP 6
+share images
+
+create new repository in dockerhub
+
+rename your local repository with dockerhub name
+
+**docker tag \[local-image:tagname\] \[new-repo:tagname\]**
+
+push your local image to dockerhub
+
+**docker push \[new-repo:tagname\]**
+
+for pushing into dockerhub you need to authorize
+
+**docker login**
+*you will stay loged in*
+
+for logout
+
+**docker logout**
