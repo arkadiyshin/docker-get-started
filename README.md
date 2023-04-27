@@ -50,16 +50,18 @@ CMD ["npm", "start"]
 ## STEP 3
 create our own custom image
 
-**build [path to Dockerfile]**
+**build -t\[name:tag\] \[path to Dockerfile\]**
 ```
 docker build .
 ```
 
 ## STEP 4
-
 run custom container
 
-**docker run -p [local port]:[expoused port]  [image_name or image_id]**
+**docker run -p [local port]:[expoused port] -d -rm [image_name or image_id]**
+*-p parametr matches local port and expoused port*
+*-rm parametr deletes container after stopping*
+*-d parametr runs container in detached mode (attached mode by the default)*
 
 stop a running container
 
@@ -67,11 +69,18 @@ stop a running container
 
 run a stopping container
 
-**docker start [container_name or container_id]**
+**docker start -a [container_name or container_id]**
+*-a parametr runs container in attached mode (detached mode by the default)*
 
-run starting in attach mode by default, start in detach mode. 
-Use -d parametr to running in detach mode.
-Use -a parametr to running in attach mode.
-For attaching running container use attach command
+attach running container
 
 **docker attach [container_name or container_id]**
+
+## STEP 5
+delete images and containers
+
+**docker rmi [image_name or image_id]**
+**docker rm [container_name or container_id]**
+
+delete all images 
+**docker image prune**
