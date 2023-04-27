@@ -69,8 +69,9 @@ run a stopping container
 
 **docker start [container_name or container_id]**
 
-run starting in attach mode, start in detach mode. 
+run starting in attach mode by default, start in detach mode. 
 Use -d parametr to running in detach mode.
+Use -a parametr to running in attach mode.
 For attaching running container use attach command
 
 **docker attach [container_name or container_id]**
