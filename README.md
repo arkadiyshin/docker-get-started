@@ -107,3 +107,18 @@ for pushing into dockerhub you need to authorize
 for logout
 
 **docker logout**
+
+VOLUME ["/app/feedback"]
+
+## VOLUMES
+
+**docker volume ls**
+
+named volume for the data
+**-v feedback:/app/feedback**
+
+bind mounts (for nodemon)
+**-v "project folder path:/app:ro**
+
+anonymous volume to protect data
+**-v /app/node_modules**
